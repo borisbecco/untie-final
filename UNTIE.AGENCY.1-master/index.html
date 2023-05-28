@@ -14,7 +14,6 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   </head>
   <body>
     <div id="custom-mouse"></div>
@@ -142,7 +141,7 @@
               <div class="toggle-button-container">
                 <button class="hamburger-button" id="toggleButton">
                   <span class="hamburger-button-triangle clickable"> ▼</span>
-                  <!-- <br /> -->
+
                   <span class="hamburger-button-agency clickable">AGENCY </span>
                 </button>
               </div>
@@ -242,8 +241,8 @@
     <div class="second-section" id="second-section">
       <div class="carousel-container">
         <div class="carousel" data-speed="40">
-          <img data-src="ABOUTPHOTOS/About01 1379x881px .png" class="lazy-load" />
-          <img data-src="ABOUTPHOTOS/About02 1379x881px.png" class="lazy-load" />
+          <img src="ABOUTPHOTOS/About01 1379x881px .png" />
+          <img src="ABOUTPHOTOS/About02 1379x881px.png" />
           <img src="ABOUTPHOTOS/About03 1379x881px.png" />
           <img src="ABOUTPHOTOS/About04 1379x881px.png " />
         </div>
@@ -252,15 +251,7 @@
         <div class="indicators clickable"></div>
       </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     <div id="third-section">
       <div class="space-section"></div>
       <!-- talents -->
@@ -269,23 +260,112 @@
         <div id="talents">
           <h1 class="talent">TALENTS</h1>
         </div>
-        <div class="talents-search">
+        <!-- <div class="talents-search">
           <input
             type="text"
             id="search-input"
             placeholder="To search by letter"
           />
+        </div> -->
+        <div class="talents-search">
+          <div class="letter-buttons">
+            <button class="letter-button clickable"  onclick="searchByLetter('A')">
+              A
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('B')">
+              B
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('C')">
+              C
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('D')">
+              D
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('E')">
+              E
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('F')">
+              F
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('G')">
+              G
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('H')">
+              H
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('I')">
+              I
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('J')">
+              J
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('K')">
+              K
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('L')">
+              L
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('M')">
+              M
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('N')">
+              N
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('O')">
+              O
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('P')">
+              P
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('Q')">
+              Q
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('R')">
+              R
+            </button>
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('S')">
+              S
+            </button>
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('T')">
+              T
+            </button>
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('U')">
+              U
+            </button>
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('V')">
+              V
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('W')">
+              W
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('X')">
+              X
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('Y')">
+              Y
+            </button>
+            <button class="letter-button clickable" onclick="searchByLetter('Z')">
+              Z
+            </button>
+          </div>
         </div>
         <div class="row" id="card-row">
           <div class="column">
-            <div class="card card1" data-letter="A" style="background: #BC4646;">
+            <div
+              class="card card1 clickable"
+              data-letter="A"
+              style="background: #bc4646"
+            >
               <h3>ALICE<br />CAMPELLO</h3>
-              <button type="button" class="button1"></button>
-              <button type="button" class="button2"></button>
+              <button type="button" class="button1 clickable"></button>
+              <button type="button" class="button2 clickable"></button>
               <img
-                data-src="TALENTS/Adriana Gatagan.jpg"
-                alt="..."
-                class="lazy-load"
+                src="TALENTS/Alice Campello.jpg"
+                alt="A picture of Alice Campello"
               />
               <p>
                 Model, fashion entrepreneur, and Italian TV and media
@@ -299,16 +379,19 @@
               </p>
             </div>
           </div>
-          
+
           <div class="column">
-            <div class="card card2" data-letter="V" style="background: #922A5B">
+            <div
+              class="card card2 clickable"
+              data-letter="V"
+              style="background: #922a5b"
+            >
               <h3>VANESA<br />LORENZO</h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
               <img
-                data-src="TALENTS/Vanesa Lorenzo.jpg"
-                alt="..."
-                class="lazy-load"
+                src="TALENTS/Vanesa Lorenzo.jpg"
+                alt="A picture of Vanesa Lorenzo"
               />
               <p>
                 Model, designer, writer, yogi, and nature lover. She has
@@ -325,14 +408,21 @@
           </div>
 
           <div class="column">
-            <div class="card card3" data-letter="A" style="background: #1F6041">
+            <div
+              class="card card3 clickable"
+              data-letter="A"
+              style="background: #1f6041"
+            >
               <h3>
                 ALEX<br />
                 Rivière
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-2.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Alex Riviere.jpg"
+                alt="A picture of Alex Riviere"
+              />
               <p>
                 Creative director, designer, stylist, and model. Alex Rivière is
                 much more than a style icon and a reference in luxury and major
@@ -347,14 +437,21 @@
           </div>
 
           <div class="column">
-            <div class="card card4" data-letter="L" style="background: #BC4646">
+            <div
+              class="card card4 clickable"
+              data-letter="L"
+              style="background: #bc4646"
+            >
               <h3>
                 LUCIA<br />
                 BARCENA
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-4.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Lucia Barcena.jpg"
+                alt="A picture of Lucia Barcena"
+              />
               <p>
                 Lucía embarked on the world of social media as a content creator
                 over 10 years ago. She has a long trajectory of creating content
@@ -366,14 +463,21 @@
           </div>
 
           <div class="column">
-            <div class="card card5" data-letter="A" style="background: #B8B6AD">
+            <div
+              class="card card5 clickable"
+              data-letter="A"
+              style="background: #b8b6ad"
+            >
               <h3>
                 ANDREA<br />
                 BELVER
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-5.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Paula Arguelles.jpg"
+                alt="A picture of Andrea Belver"
+              />
               <p>
                 Andrea ventured into the world of social media as a fashion and
                 lifestyle content creator at the young age of 18. In 2021, she
@@ -387,11 +491,18 @@
           </div>
 
           <div class="column">
-            <div class="card card6" data-letter="B" style="background: #1F6041">
+            <div
+              class="card card6 clickable"
+              data-letter="B"
+              style="background: #1f6041"
+            >
               <h3>BELTRÁN<br />LOZANO</h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-6.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Beltran Lozano.jpg"
+                alt="A picture of Beltran Lozano"
+              />
               <p>
                 Model and content creator. He started in the field of marketing
                 and business while balancing his career as a model and
@@ -404,14 +515,21 @@
           </div>
 
           <div class="column">
-            <div class="card card7" data-letter="M" style="background: #B8B6AD">
+            <div
+              class="card card7 clickable"
+              data-letter="M"
+              style="background: #b8b6ad"
+            >
               <h3>
                 MARÍA<br />
                 DE LA ORDEN
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-7.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Maria De la Orden.jpg"
+                alt="A picture of María De la Orden"
+              />
               <p>
                 Entrepreneur and designer, María de la Orden is the co-founder
                 of two successful fashion brands with the "Made in Spain" seal:
@@ -425,14 +543,21 @@
           </div>
 
           <div class="column">
-            <div class="card card8" data-letter="C" style="background: #922A5B">
+            <div
+              class="card card8 clickable"
+              data-letter="C"
+              style="background: #922a5b"
+            >
               <h3>
                 CARLOTA<br />
                 ARIZA
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-8.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Carlota Ariza.jpg"
+                alt="A picture of Carlota Ariza"
+              />
               <p>
                 Carlota Ariza studied Fashion Management and specialized in the
                 fashion communication sector. With 5 years of professional
@@ -445,14 +570,21 @@
           </div>
 
           <div class="column">
-            <div class="card card9" data-letter="I" style="background: #B8B6AD">
+            <div
+              class="card card9 clickable"
+              data-letter="I"
+              style="background: #b8b6ad"
+            >
               <h3>
                 INÉS<br />
                 DE COMINGES
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-9.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Ines de Cominges.jpg"
+                alt="A picture of Inés de Cominges"
+              />
               <p>
                 She studied Fashion Marketing at the Marangoni School of Fashion
                 and Design in London and is responsible for digital marketing at
@@ -466,14 +598,21 @@
           </div>
 
           <div class="column">
-            <div class="card card10" data-letter="I" style="background: #BC4646">
+            <div
+              class="card card10 clickable"
+              data-letter="I"
+              style="background: #bc4646"
+            >
               <h3>
                 INÉS<br />
                 MARTÍN ALCALDE
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Ines Martin Alcalde.jpg"
+                alt="A picture of Ines Martin Alcalde"
+              />
               <p>
                 Inés has always had a passion for fabrics and the world of
                 textiles. Thanks to her vision and an incredible team of
@@ -488,14 +627,21 @@
           </div>
 
           <div class="column">
-            <div class="card card11" data-letter="P" style="background: #922A5B">
+            <div
+              class="card card11 clickable"
+              data-letter="P"
+              style="background: #922a5b"
+            >
               <h3>
                 PAULA<br />
                 ARGÜELLES
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-1.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Paula Arguelles.jpg"
+                alt="A picture of Paula Arguelles"
+              />
               <p>
                 She studied Audiovisual Communication in Madrid, and for the
                 past 7 years, Paula Argüelles has combined her passion for
@@ -510,14 +656,21 @@
           </div>
 
           <div class="column">
-            <div class="card card12" data-letter="P" style="background: #BC4646">
+            <div
+              class="card card12 clickable"
+              data-letter="P"
+              style="background: #bc4646"
+            >
               <h3>
                 PAULA<br />
                 CELIERES
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-2.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Paula Celieres.jpg"
+                alt="A picture of Paula Celieres"
+              />
               <p>
                 As a model and actress, Paula Celieres has worked with prominent
                 brands and film production companies. Social media has become
@@ -530,14 +683,21 @@
           </div>
 
           <div class="column">
-            <div class="card card13" data-letter="A" style="background: #B8B6AD">
+            <div
+              class="card card13 clickable"
+              data-letter="A"
+              style="background: #b8b6ad"
+            >
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
               <h3>
                 ANA<br />
                 BOYER
               </h3>
-              <img data-src="img/image-9.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Alice Campello.jpg"
+                alt="A picture of Ana Boyer"
+              />
               <p>
                 Her style and elegance have made her a fashion icon. She holds a
                 degree in Law, Business Administration, and Management and is
@@ -552,14 +712,21 @@
           </div>
 
           <div class="column">
-            <div class="card card14" data-letter="F" style="background: #1F6041">
+            <div
+              class="card card14 clickable"
+              data-letter="F"
+              style="background: #1f6041"
+            >
               <h3>
                 FERNANDO<br />
                 VERDASCO
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-4.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Ines de Cominges.jpg"
+                alt="A picture of Fernando Verdasco"
+              />
               <p>
                 Fernando Verdasco is one of the most important tennis players
                 from Spain and a 'top ten' player in the global tennis rankings.
@@ -571,14 +738,21 @@
           </div>
 
           <div class="column">
-            <div class="card card15" data-letter="T" style="background: #922A5B">
+            <div
+              class="card card15 clickable"
+              data-letter="T"
+              style="background: #922a5b"
+            >
               <h3>
                 TOMÁS<br />
                 LASO ARGOS
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-7.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Tomas Laso.jpg"
+                alt="A picture of Tomás Laso Argos"
+              />
               <p>
                 He is an entrepreneur and the founder of "Absolut Bespoke," a
                 made-to-order high-end tailoring atelier. Since 2010, the brand
@@ -589,14 +763,21 @@
           </div>
 
           <div class="column">
-            <div class="card card16" data-letter="M" style="background: #B8B6AD">
+            <div
+              class="card card16 clickable"
+              data-letter="M"
+              style="background: #b8b6ad"
+            >
               <h3>
                 MER<br />
                 CREUS
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-6.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Alex Riviere.jpg"
+                alt="A picture of Mer Creus"
+              />
               <p>
                 As an interior designer and art lover, Mer Creus ventured into
                 social media alongside her daughter, Alex Rivière. Due to the
@@ -609,14 +790,21 @@
           </div>
 
           <div class="column">
-            <div class="card card17" data-letter="S" style="background: #1F6041">
+            <div
+              class="card card17 clickable"
+              data-letter="S"
+              style="background: #1f6041"
+            >
               <h3>
                 SOFÍA<br />
                 JOHANSON
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-7.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Beltran Lozano.jpg"
+                alt="A picture of Sofía Johanson"
+              />
               <p>
                 Content creator and fashion consultant. After many years working
                 in the communication sector, she is now the founder of "The
@@ -630,14 +818,21 @@
           </div>
 
           <div class="column">
-            <div class="card card18" data-letter="P" style="background: #BC4646">
+            <div
+              class="card card18 clickable"
+              data-letter="P"
+              style="background: #bc4646"
+            >
               <h3>
                 PAOLA<br />
                 VARGAS
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-8.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Ines Martin Alcalde.jpg"
+                alt="A picture of Paola Vargas"
+              />
               <p>
                 Model, mother, and passionate about photography, Paola is a
                 content creator and blogger. On her website and Instagram
@@ -649,14 +844,21 @@
           </div>
 
           <div class="column">
-            <div class="card card19" data-letter="M" style="background: #922A5B">
+            <div
+              class="card card19 clickable"
+              data-letter="M"
+              style="background: #922a5b"
+            >
               <h3>
                 MARTHA<br />
                 GRAEFF
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-9.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Maria De la Orden.jpg"
+                alt="A picture of Martha Graeff"
+              />
               <p>
                 Martha Graeff is a content creator and co-founder of 'The Bazaar
                 for Good'. Her passion for fashion led her to create her fashion
@@ -670,14 +872,21 @@
           </div>
 
           <div class="column">
-            <div class="card card20" data-letter="J" style="background: #B8B6AD">
+            <div
+              class="card card20 clickable"
+              data-letter="J"
+              style="background: #b8b6ad"
+            >
               <h3>
                 JENNY<br />
                 LÓPEZ
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Alice Campello.jpg"
+                alt="A picture of Jenny López"
+              />
               <p>
                 Jenny López began her journey in the fashion world at a very
                 young age, becoming the face of major brands such as L'Oreal,
@@ -690,14 +899,21 @@
             </div>
           </div>
           <div class="column">
-            <div class="card card21" data-letter="J" style="background: #BC4646">
+            <div
+              class="card card21 clickable"
+              data-letter="J"
+              style="background: #bc4646"
+            >
               <h3>
                 JEN<br />
                 BARREIRO
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Ines de Cominges.jpg"
+                alt="A picture of Jen Barreiro"
+              />
               <p>
                 Passionate about skincare: the care and treatment of the skin,
                 Jen Barreiro is a makeup artist & hair stylist with her own
@@ -710,14 +926,21 @@
             </div>
           </div>
           <div class="column">
-            <div class="card card22" data-letter="A" style="background: #922A5B">
+            <div
+              class="card card22 clickable"
+              data-letter="A"
+              style="background: #922a5b"
+            >
               <h3>
                 ANGIE<br />
                 LANDABURU
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Tomas Laso.jpg"
+                alt="A picture of Angie Landaburu"
+              />
               <p>
                 Professional model and content creator based in Miami, Angie,
                 with over a million followers on her Instagram profile, is a
@@ -728,14 +951,21 @@
             </div>
           </div>
           <div class="column">
-            <div class="card card23" data-letter="K" style="background: #1F6041">
+            <div
+              class="card card23 clickable"
+              data-letter="K"
+              style="background: #1f6041"
+            >
               <h3>
                 KATERINA<br />
                 BEREZNHA
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Katerina Bereznha.jpg"
+                alt="A picture of Katerina Bereznha"
+              />
               <p>
                 Katerina has been working as a content creator on social media
                 since 2017, specializing in fashion, lifestyle, and beauty. She
@@ -746,14 +976,21 @@
             </div>
           </div>
           <div class="column">
-            <div class="card card24" data-letter="A" style="background: #B8B6AD">
+            <div
+              class="card card24 clickable"
+              data-letter="A"
+              style="background: #b8b6ad"
+            >
               <h3>
                 ADRIANA<br />
                 GATAGÁN
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Adriana Gatagan.jpg"
+                alt="A picture of Adriana Gatagán"
+              />
               <p>
                 Adriana combines her roles as an illustrator and model, with a
                 career spanning over 15 years in the industry. Her artistic
@@ -766,14 +1003,21 @@
             </div>
           </div>
           <div class="column">
-            <div class="card card25" data-letter="A" style="background: #BC4646">
+            <div
+              class="card card25 clickable"
+              data-letter="A"
+              style="background: #bc4646"
+            >
               <h3>
                 ALEX<br />
                 PASTRANA
               </h3>
               <button type="button" class="button1"></button>
               <button type="button" class="button2"></button>
-              <img data-src="img/image-10.jpg" alt="..." class="lazy-load" />
+              <img
+                src="TALENTS/Alex Pastrana.jpg"
+                alt="A picture of Alex Pastrana"
+              />
               <p>
                 Álex Pastrana trained for 4 years as an actor at Estudio
                 Corazza, one of the most renowned drama schools in Madrid. He
@@ -802,7 +1046,7 @@
             >
           </div>
         </div>
-        <div class="container-1-parallax" data-speed="50">
+        <div class="container-1-parallax" data-speed="20">
           <p class="wwd-bold">01</p>
           <br /><br />
           <p>WHAT WE DO</p>
@@ -830,11 +1074,7 @@
             WE HAVE NO LIMITS<br />
             WHEN IT COMES TO SPREADING THE WORD
           </p>
-          <img
-            class="lazy-load"
-            data-src="WHATWEDO/image-1.jpg"
-            alt="Placeholder Image"
-          />
+          <img src="WHATWEDO/image-1.jpg" alt="Placeholder Image" />
         </div>
       </div>
 
@@ -854,7 +1094,7 @@
             >
           </div>
         </div>
-        <div class="container-2-parallax" data-speed="50">
+        <div class="container-2-parallax" data-speed="20">
           <p class="wwd-bold">02</p>
           <br />
           <p>WHAT WE DO</p>
@@ -872,9 +1112,8 @@
             THE LONG AND SHORT TERM.
           </p>
           <img
-            class="lazy-load"
             id="img-complete"
-            data-src="WHATWEDO/image2.jpg"
+            src="WHATWEDO/image2.jpg"
             alt="Placeholder Image"
           />
         </div>
@@ -894,7 +1133,7 @@
             >
           </div>
         </div>
-        <div class="container-3-parallax" data-speed="50">
+        <div class="container-3-parallax" data-speed="20">
           <p class="wwd-bold">03</p>
           <br />
           <p>WHAT WE DO</p>
@@ -917,12 +1156,7 @@
             OF ACHIEVING AN AUTHENTIC BRAND IMAGE THAT PLEASES OUR <br />CLIENT.
           </p>
 
-          <img
-            class="lazy-load"
-            id="lapiz"
-            data-src="WHATWEDO/image-2.jpg"
-            alt="Placeholder Image"
-          />
+          <img id="lapiz" src="WHATWEDO/image-2.jpg" alt="Placeholder Image" />
         </div>
       </div>
       <!--#####################---SECTION 3---##########################################--->
@@ -941,7 +1175,7 @@
             >
           </div>
         </div>
-        <div class="container-4-parallax" data-speed="50">
+        <div class="container-4-parallax" data-speed="20">
           <p class="wwd-bold">04</p>
           <br />
           <p>WHAT WE DO</p>
@@ -962,12 +1196,7 @@
           <br /><br /><br /><br /><br /><br />
           <p id="middle4-text">UT WISI ENIM AD MINIM VENIAM</p>
 
-          <img
-            class="lazy-load"
-            id="ZAPATOS"
-            data-src="WHATWEDO/image3.jpg"
-            alt="Placeholder Image"
-          />
+          <img id="ZAPATOS" src="WHATWEDO/image3.jpg" alt="Placeholder Image" />
         </div>
       </div>
       <!--#####################---SECTION 4---##########################################--->
@@ -985,7 +1214,7 @@
             >
           </div>
         </div>
-        <div class="container-5-parallax" data-speed="50">
+        <div class="container-5-parallax" data-speed="20">
           <p class="wwd-bold">05</p>
           <br />
           <p>
@@ -1011,9 +1240,8 @@
           <p id="middle5-text">LOREM IPSUM DOLOR <br />SIT.</p>
 
           <img
-            class="lazy-load"
             id="anteojo"
-            data-src="WHATWEDO/image-3.jpg"
+            src="WHATWEDO/image-3.jpg"
             alt="Placeholder Image"
           />
         </div>
@@ -1034,9 +1262,9 @@
             >
           </div>
         </div>
-        <div class="container-6-parallax" data-speed="50">
+        <div class="container-6-parallax" data-speed="20">
           <p class="wwd-bold">06</p>
-          <br>
+          <br />
           <p>WHAT WE DO</p>
           <br /><br /><br /><br />
           <p id="middle6-text">
@@ -1056,12 +1284,7 @@
             RELATIONSHIP ENDURABLE.
           </p>
 
-          <img
-            class="lazy-load"
-            id="velas"
-            data-src="WHATWEDO/image6.jpg"
-            alt="Placeholder Image"
-          />
+          <img id="velas" src="WHATWEDO/image6.jpg" alt="Placeholder Image" />
         </div>
       </div>
       <!--#####################---SECTION 6---##########################################--->

@@ -57,7 +57,7 @@ $(document).ready(function () {
 // language
 
 function redirectToSpanishIndex() {
-  window.location.href = "/ES/index.html";
+  window.location.href = "ES/index.html";
 }
 
 let languageEs = document.querySelector(".language-es");
@@ -100,16 +100,15 @@ window.addEventListener("scroll", function () {
   const scrollPosition = window.pageYOffset + window.innerHeight;
 
   // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    scrollPosition > secondSectionOffsetTop + secondSectionHeight
-  ) {
+  if (scrollPosition > secondSectionOffsetTop + secondSectionHeight) {
     const speed = carouselContainer1.getAttribute("data-speed");
     const y =
-      ((scrollPosition - (secondSectionOffsetTop + secondSectionHeight)) * speed) / 100;
+      ((scrollPosition - (secondSectionOffsetTop + secondSectionHeight)) *
+        speed) /
+      100;
     carouselContainer1.style.transform = `translate3d(0, ${y}px, 0)`;
   }
 });
-
 
 // paralax wwd - page
 
@@ -470,9 +469,6 @@ createIndicators();
 updateIndicators();
 changeCarouselContainerBackground();
 
-
-
-
 //talents
 
 // function getRandomColor() {
@@ -512,49 +508,70 @@ function toggleCard() {
     var p = card.querySelector("p");
 
     button1.addEventListener("click", function () {
-      if (img.style.display === "none") {
-        img.style.display = "block";
-        p.style.display = "none";
-      } else {
-        img.style.display = "none";
-      }
+      img.style.display = "block";
+      p.style.display = "none";
+      button2.classList.add("active");
+      button1.classList.remove("active");
     });
 
     button2.addEventListener("click", function () {
-      if (p.style.display === "none") {
-        p.style.display = "block";
-        img.style.display = "none";
-      } else {
-        p.style.display = "none";
-      }
+      p.style.display = "block";
+      img.style.display = "none";
+
+      button1.classList.add("active");
+      button2.classList.remove("active");
     });
   });
 }
 
+$(document).ready(function () {
+  $(".card").click(function () {
+    var card = $(this);
+    var img = card.find("img");
+    var p = card.find("p");
 
-$(document).ready(function() {
-  $('.card').click(function() {
-    $(this).toggleClass('expanded');
+    img.show();
+    p.hide();
+
+    card.toggleClass("expanded");
+
+    // Obtener el botón activo
+    var activeButton = card.find(".active");
+
+    // Remover la clase .active de todos los botones en la tarjeta
+    card.find(".button1, .button2").removeClass("active");
+
+    // Agregar la clase .active al botón correspondiente
+    if (img.is(":visible")) {
+      activeButton = card.find(".button1");
+    } else {
+      activeButton = card.find(".button2");
+    }
+    activeButton.addClass("active");
   });
 
-  $('.button1').click(function(event) {
+  $(".button1").click(function (event) {
     event.stopPropagation();
-    var card = $(this).closest('.card');
-    card.find('img').toggle();
-    card.find('p').toggle();
+    var card = $(this).closest(".card");
+    card.find("img").show();
+    card.find("p").hide();
+
+    // Remover la clase .active de todos los botones en la tarjeta
+    card.find(".button1, .button2").removeClass("active");
+    $(this).addClass("active");
   });
 
-  $('.button2').click(function(event) {
+  $(".button2").click(function (event) {
     event.stopPropagation();
-    var card = $(this).closest('.card');
-    card.find('p').toggle();
-    card.find('img').toggle();
+    var card = $(this).closest(".card");
+    card.find("p").show();
+    card.find("img").hide();
+
+    // Remover la clase .active de todos los botones en la tarjeta
+    card.find(".button1, .button2").removeClass("active");
+    $(this).addClass("active");
   });
 });
-
-
-
-
 
 //overlay-menu
 
@@ -609,11 +626,26 @@ document.getElementById("toggleButton").addEventListener("click", function () {
 
 // talent
 
-const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("input", function () {
-  const letter = this.value.trim().toUpperCase();
-  filterCardsByLetter(letter);
-});
+// Obtén una referencia a todos los botones de letras
+const letterButtons = document.getElementsByClassName("letter-button");
+let activeButton = null;
+
+for (let i = 0; i < letterButtons.length; i++) {
+  const button = letterButtons[i];
+  const letter = button.textContent.trim().toUpperCase();
+  button.addEventListener("click", function () {
+    // Quita el subrayado del botón activo previo, si existe
+    if (activeButton) {
+      activeButton.classList.remove("active");
+    }
+
+    // Aplica el subrayado al botón seleccionado
+    button.classList.add("active");
+    activeButton = button;
+
+    filterCardsByLetter(letter);
+  });
+}
 
 function filterCardsByLetter(letter) {
   const cards = document.getElementsByClassName("card");
